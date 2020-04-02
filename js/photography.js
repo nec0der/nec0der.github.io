@@ -5,6 +5,9 @@ $(document).ready(() => {
 
   $.ajax({
     url: folder,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
     success: function(data) {
       loadingIndicator.toggle('lds-dual-ring');
 
