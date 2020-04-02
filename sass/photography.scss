@@ -4,12 +4,12 @@
   .page-content {
     padding: 1rem 0;
 
-    ul {
+    #photo-wrapper {
       display: flex;
       flex-wrap: wrap;
     }
 
-    li {
+    .photo {
       overflow: hidden;
       overflow-x: scroll;
       flex-grow: 1;

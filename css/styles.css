@@ -450,13 +450,13 @@ footer {
   overflow: hidden; }
   .photography .page-content {
     padding: 1rem 0; }
-    .photography .page-content ul {
+    .photography .page-content #photo-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
-    .photography .page-content li {
+    .photography .page-content .photo {
       overflow: hidden;
       overflow-x: scroll;
       -webkit-box-flex: 1;
@@ -464,7 +464,7 @@ footer {
       flex-grow: 1;
       margin-bottom: 1rem; }
       @media (min-width: 600px) {
-        .photography .page-content li {
+        .photography .page-content .photo {
           margin: 2rem; } }
     .photography .page-content img.lazy {
       max-height: 100%;
