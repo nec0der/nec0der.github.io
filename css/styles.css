@@ -472,8 +472,9 @@ footer {
       height: 65vh;
       -o-object-fit: cover;
       object-fit: cover;
-      background-image: url("../images/loading.gif");
-      background-size: cover; }
+      background-image: url("images/loading.gif");
+      background-repeat: no-repeat;
+      background-position: 50% 50%; }
 
 .skills .page-content {
   display: -webkit-box;
