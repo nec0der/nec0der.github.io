@@ -1,0 +1,25 @@
+.dark-theme-square-btn {
+    @include box(23px, 23px);
+    min-width: 23px;
+    // position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: white;
+    border: 2px solid black;
+  }
+  
+  .inverted {
+    filter: invert(1);
+  }
+  
+  .light-theme-bg {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  

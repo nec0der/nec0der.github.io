@@ -1,0 +1,37 @@
+.skills {
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid;
+        margin-bottom: 1rem;
+
+        .name {
+            padding: .5rem .25em;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // justify-content: space-between;
+
+            .skill {
+                border: 1px solid;
+                @include breakpoint(mobile) {
+                    flex: 1 0 150px;
+                    margin: 1rem .25em;
+                }
+
+                @include breakpoint(both) {
+                    
+                }
+            }
+        }
+    }
+}

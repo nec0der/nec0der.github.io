@@ -1,0 +1,185 @@
+@import 'mixins';
+@import 'header';
+@import 'footer';
+@import 'theme-btn';
+@import 'index.scss';
+@import 'about.scss';
+@import 'roadmap.scss';
+@import 'photography.scss';
+@import 'skills.scss';
+
+$theme-btn-border: 5px solid white;
+
+h1 {
+  @include heading-1;
+}
+h2 {
+  @include heading-2;
+}
+h3 {
+  @include heading-3;
+}
+h4 {
+  @include heading-4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // height: 100%;
+  font-family: 'Baloo 2', cursive;
+}
+
+html,
+body,
+.container {
+  min-height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+
+  @include breakpoint(both) {
+    flex-direction: row;
+  }
+
+  &--body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    // @include breakpoint(both) {
+    //   margin-left: 100px;
+    // }
+
+    @include breakpoint(both) {
+      margin-left: 100px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.page-content {
+  position: relative;
+  animation: transitionIn 0.5s;
+  flex: 1;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.page-nav {
+  display: flex;
+  border-top: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  // animation: transitionDown 0.5s;
+
+  // @include breakpoint(both) {
+  //   border-left: 1px solid black;
+  // }
+
+  a {
+    padding: 10px 0;
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    img {
+      width: 20px;
+      margin: 0 1.5rem;
+    }
+
+    &.forward {
+      justify-content: flex-end;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+#pages {
+  // padding: 10px;
+  position: sticky;
+  justify-content: center;
+  display: flex;
+  padding: 7px;
+  border-bottom: 1px solid black;
+  animation: transitionDown 0.6s;
+
+  a {
+    padding: 5px 1rem;
+    border-radius: 25px;
+    margin: 0 5px;
+  }
+}
+
+.current {
+  background: #d9d9d9;
+}
+
+@keyframes transitionDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lds-dual-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

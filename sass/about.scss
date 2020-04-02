@@ -1,0 +1,94 @@
+.about {
+  .page-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint(both) {
+      padding: 2rem 30rem 2rem 45px;
+    }
+  }
+
+  .profile-pic {
+    width: 125px;
+    border-radius: 50%;
+    height: 140px;
+    margin: 1rem 0 2rem;
+
+    @include breakpoint(mobile) {
+      align-self: center;
+    }
+  }
+
+  #about-myself {
+    // font-size: 1.25rem;
+    #intro {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+    }
+
+    @include breakpoint(tablet) {
+    }
+
+    @include breakpoint(desktop) {
+    }
+
+    a {
+      margin-right: 1rem;
+      width: 32px;
+
+      //   @include breakpoint(mobile) {
+      //     width: 32px;
+      //   }
+
+      //   @include breakpoint(both) {
+      //   }
+
+      //   @include breakpoint(tablet) {
+      //   }
+
+      //   @include breakpoint(desktop) {
+      //     width: 42px;
+      //   }
+
+      //   &:first-child {
+      //     @include breakpoint(mobile) {
+      //       width: 40px;
+      //     }
+
+      //     @include breakpoint(tablet) {
+      //       width: 45px;
+      //     }
+
+      //     @include breakpoint(desktop) {
+      //       width: 50px;
+      //     }
+
+      //     img {
+      //       border-radius: 50%;
+      //     }
+      //   }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $point == both {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 600px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin heading {
+  line-height: 1.2;
+  color: inherit;
+}
+
+@mixin heading-1 {
+  @include heading;
+  font-size: 3.375em;
+}
+
+@mixin heading-2 {
+  @include heading;
+  font-size: 2.966em;
+}
+
+@mixin heading-3 {
+  @include heading;
+  font-size: 1.5em;
+}
+
+@mixin heading-4 {
+  @include heading;
+  font-size: 1.318em;
+}
+
+@mixin heading-5 {
+  @include heading;
+  font-size: 1em;
+}
+
+@mixin heading-6 {
+  @include heading;
+  font-size: 0.875em;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

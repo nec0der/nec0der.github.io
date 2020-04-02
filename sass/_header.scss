@@ -1,0 +1,110 @@
+$headerBorder: 1px solid black;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0 2rem;
+    height: 4rem;
+    border-bottom: $headerBorder;
+    animation: transitionDown 0.7s;
+  }
+
+  @include breakpoint(both) {
+    position: fixed;
+    width: 101px;
+    height: 100vh;
+    border-right: $headerBorder;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    animation: transitionLeft 0.7s;
+  }
+
+  @include breakpoint(tablet) {
+  }
+
+  @include breakpoint(desktop) {
+
+  }
+
+  
+
+  #logo {
+    font-weight: 500;
+    top: 30px;
+    left: 30px;
+
+    h3 {
+      @include breakpoint(mobile) {
+        @include heading-4;
+      }
+
+      @include breakpoint(tablet) {
+
+      }
+    }
+  }
+
+  ol {
+    position: absolute;
+    counter-reset: my-awesome-counter;
+    font-family: 'Fira Sans', sans-serif;
+
+    li {
+      counter-increment: my-awesome-counter;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      display: none;
+
+      &:before {
+        content: '0' counter(my-awesome-counter);
+        font-size: 10px;
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        display: block;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(both) {
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@keyframes transitionDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes transitionLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
