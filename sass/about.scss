@@ -13,15 +13,24 @@
     }
   }
 
-  .profile-pic {
-    width: 125px;
+  .circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
     border-radius: 50%;
-    height: 140px;
-    margin: 1rem 0 2rem;
+    margin-bottom: 2rem;
 
     @include breakpoint(mobile) {
       align-self: center;
     }
+  }
+  
+  .circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -30px;
   }
 
   #about-myself {
